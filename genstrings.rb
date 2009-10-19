@@ -19,7 +19,7 @@ C_ONE_TO_ONE_ESCAPES = {
 
 def raise_if_invalid_code_point(cp)
   # C99 standard at 6.4.3
-  if (cp < 0xA0 and cp != 0x and cp != 0x40 and cp != 0x60) or (cp >= 0xD800 and cp <= 0xDFFF)
+  if (cp < 0xA0 and cp != 0x24 and cp != 0x40 and cp != 0x60) or (cp >= 0xD800 and cp <= 0xDFFF)
     raise "Invalid code point specified by \\u or \\U: #{cp}"
   end
   
